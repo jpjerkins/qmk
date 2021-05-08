@@ -53,9 +53,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TRNS, KC_WH_L, KC_WH_U, KC_WH_D, KC_WH_R,            KC_NLCK, KC_P7, KC_P8, KC_P9, KC_PMNS,
             KC_BTN1, KC_MS_L, KC_MS_U, KC_MS_D, KC_MS_R,            KC_MS_U, KC_P4, KC_P5, KC_P6, KC_PPLS,
             KC_LCTL, MT(MOD_LSFT, KC_BTN3), KC_BTN2, MT(MOD_LALT, KC_BTN1), KC_TRNS,
-            KC_MS_D, KC_P1, KC_P2, KC_P3, KC_PPLS,
+            KC_MS_D, MT(MOD_RALT, KC_P1), MT(MOD_RGUI, KC_P2), MT(MOD_RSFT, KC_P3), MT(MOD_RCTL, KC_PPLS),
             KC_TRNS, KC_RALT, KC_TRNS,            KC_P0, KC_PDOT, KC_PENT
     ),
+// Keymap 3: Numbers/Fn layer
 [NFN] = LAYOUT_gergoplex(
             KC_1, KC_2, KC_3, KC_4, KC_5,            KC_6, KC_7, KC_8, KC_9, KC_0,
             KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,            KC_F6, KC_F7, KC_F8, KC_F9, KC_F10,
@@ -64,14 +65,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TRNS, KC_TRNS, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS
     ),
-// Keymap 1: Symbols/Nav layer
+// Keymap 4: Nav Overlay layer
 [NAV2] = LAYOUT_gergoplex(
             KC_RALT, KC_RALT, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_INS, KC_HOME, KC_PGUP, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_DEL, KC_END, KC_PGDN, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_RALT, KC_RGUI, KC_RSFT, KC_RCTL,
             KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS
     ),
-// Keymap 2: Number Pad layer
+// Keymap 5: Modifiers Overlay
 [BMOD]  LAYOUT_gergoplex(
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
