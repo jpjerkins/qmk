@@ -15,6 +15,7 @@
 #define NFN 3 // numbers/Fn keys
 #define NAV2 4 // nav 2
 #define BMOD 5 // base mods
+#define PERMISSIVE_HOLD
 
 /* Combomap
  *
@@ -34,10 +35,12 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Keymap 0: Basic layer
 [BASE] = LAYOUT_gergoplex(
-            KC_Q, KC_W, KC_E, KC_R, KC_T,            KC_Y, KC_U, KC_I, KC_O, KC_P,
-            KC_A, KC_S, KC_D, KC_F, KC_G,            KC_H, KC_J, KC_K, KC_L, KC_SCLN,
-            KC_Z, KC_X, KC_C, KC_V, KC_B,            KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
-            MO(3), KC_LSFT, MO(2),            MO(1), KC_SPC, MO(5)
+            KC_Q,  KC_W,    KC_E, KC_R, KC_T,            KC_Y, KC_U, KC_I,    KC_O,          KC_P,
+            KC_A,  KC_S,    KC_D, KC_F, KC_G,            KC_H, KC_J, KC_K,    KC_L,          KC_SCLN,
+//            KC_Z,  KC_X,    KC_C, KC_V, KC_B,            KC_N, KC_M, KC_COMM, KC_DOT,        KC_SLSH,
+            MT(MOD_LCTL, KC_Z), MT(MOD_LSFT, KC_X), MT(MOD_LGUI, KC_C), MT(MOD_LALT, KC_V), KC_B,
+            KC_N, MT(MOD_RALT, KC_M), MT(MOD_RGUI, KC_COMM), MT(MOD_RSFT, KC_DOT), MT(MOD_RCTL, KC_SLSH),
+            MO(3), KC_LSFT, LT(2, KC_BSPC),                                   MO(1),   KC_SPC, KC_ENT // MO(5)
     ),
 // Keymap 1: Symbols/Nav layer
 [SYMB] = LAYOUT_gergoplex(
@@ -71,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_DEL, KC_END, KC_PGDN, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_RALT, KC_RGUI, KC_RSFT, KC_RCTL,
             KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS
-    ),
+    )/*,
 // Keymap 5: Modifiers Overlay
 [BMOD]  LAYOUT_gergoplex(
             KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,            KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
@@ -80,5 +83,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
             KC_TRNS, MT(MOD_RALT, KC_M), MT(MOD_RGUI, KC_COMM), MT(MOD_RSFT, KC_DOT), MT(MOD_RCTL, KC_SLSH),
             KC_TRNS, KC_SPC, KC_TRNS,
             KC_TRNS, KC_TRNS, KC_TRNS
-    )
+    )*/
 };
