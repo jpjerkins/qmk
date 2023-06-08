@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //            KC_Z,  KC_X,    KC_C, KC_V, KC_B,            KC_N, KC_M, KC_COMM, KC_DOT,        KC_SLSH,
             MT(MOD_LCTL, KC_Z), MT(MOD_LSFT, KC_X), MT(MOD_LGUI, KC_C), MT(MOD_LALT, KC_V), KC_B,
             KC_N, MT(MOD_RALT, KC_M), MT(MOD_RGUI, KC_COMM), MT(MOD_RSFT, KC_DOT), MT(MOD_RCTL, KC_SLSH),
-            MO(3), KC_LSFT, LT(2, KC_BSPC),                                   MO(1),   KC_SPC, KC_ENT // MO(5)
+            LT(3, KC_TAB), KC_LSFT, LT(2, KC_BSPC),                                   LT(1, KC_DEL),   KC_SPC, KC_ESC // MO(5)
     ),
 // Keymap 1: Symbols/Nav layer
 [SYMB] = LAYOUT_gergoplex(
